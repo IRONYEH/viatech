@@ -2,7 +2,7 @@
 interview quizzes
 
 國泰補習班中，有五位學生期中考的成績分別為[53, 64, 75, 19, 92]，但是老師在輸入成績的時候看反了，把五位學生的成績改成了[35, 46, 57, 91, 29]，請用一個函數來將學生的成績修正。
-![image](https://github.com/IRONYEH/viatech/assets/144384730/e6e18dd7-5c96-4460-a52c-952ae205476b)
+
 
 "def ReverseNumber(數字列表):
     a = []
@@ -45,7 +45,7 @@ for 字母, 次數 in 排序後的字母計數:
 
 "QA部門今天舉辦團康活動，有n個人圍成一圈，順序排號。從第一個人開始報數（從1到3報數），凡報到3的人退出圈子。
 請利用一段程式計算出，最後留下的那位同事，是所有同事裡面的第幾順位?"
-![image](https://github.com/IRONYEH/viatech/assets/144384730/54d2afe8-3a7f-4b47-912d-00c5dc7c64a8)
+
 
 "def 最後留下的順位(n):
     # 當只有一個人時，他就是最後留下的人，順位為1
@@ -59,10 +59,8 @@ for 字母, 次數 in 排序後的字母計數:
 n = 100  # 假設有100個人
 最後順位 = 最後留下的順位(n)
 print(f""最後留下的同事是所有同事中的第 {最後順位} 順位。"")"
-![image](https://github.com/IRONYEH/viatech/assets/144384730/de91b2a7-06ea-4566-b46d-0b4251e1adb3)
 
 1. 使用Chrome App到國泰世華銀行官網(https://www.cathaybk.com.tw/cathaybk/)並將畫面截圖。
-![image](https://github.com/IRONYEH/viatech/assets/144384730/279701fd-4178-427b-94f6-d5f06e8ba192)
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -88,7 +86,6 @@ driver.save_screenshot(screenshot_path)
 print('下載「國泰世華銀行官網.png」完成')
 
 2. 點選左上角選單，進入 個人金融 > 產品介紹 > 信用卡列表，需計算有幾個項目並將畫面截圖。
-![image](https://github.com/IRONYEH/viatech/assets/144384730/c77c83c0-4b4a-4fa7-8d13-4f6131d498a6)
 
 # 建立行為鍊
 ac = ActionChains(driver)
