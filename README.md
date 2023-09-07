@@ -19,13 +19,13 @@ ReverseNumber(成績)"
 
 "文字 = ""Hello welcome to Cathay 60th year anniversary""
 
-# 將文字轉換為大寫，以便不區分大小寫
+將文字轉換為大寫，以便不區分大小寫
 文字 = 文字.upper()
 
-# 創建一個字典來存儲每個字母的出現次數
+創建一個字典來存儲每個字母的出現次數
 字母計數 = {}
 
-# 遍歷文字中的每個字符
+遍歷文字中的每個字符
 for 字母 in 文字:
     if (字母.isalpha() or 字母.isdigit()):  # 確保只計算字母，排除空格和符號
         if 字母 in 字母計數:
@@ -33,13 +33,13 @@ for 字母 in 文字:
         else:
             字母計數[字母] = 1
 
-# 定義排序的順序
+定義排序的順序
 排序順序 = ""0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ""
 
-# 使用排序順序對字母計數進行排序
+使用排序順序對字母計數進行排序
 排序後的字母計數 = sorted(字母計數.items(), key=lambda x: 排序順序.index(x[0]))
 
-# 輸出排序後的字母計數
+輸出排序後的字母計數
 for 字母, 次數 in 排序後的字母計數:
     print(f""{字母.upper()} {次數} "")"
 
@@ -68,18 +68,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 
 
-# 创建一个 Chrome WebDriver 的 Service 对象，并指定 Chrome WebDriver 的路径
+创建一个 Chrome WebDriver 的 Service 对象，并指定 Chrome WebDriver 的路径
 chrome_driver_path = "./chromedriver.exe"  # 请替换为您的 Chrome WebDriver 的路径
 service = Service(executable_path=chrome_driver_path)
 
-# 使用 Service 对象创建 Chrome WebDriver 实例
+使用 Service 对象创建 Chrome WebDriver 实例
 driver = webdriver.Chrome(service=service)
 
-# 打开指定的网页
+打开指定的网页
 url = 'https://www.cathaybk.com.tw/cathaybk'
 driver.get(url)
 
-# 截取屏幕截图并保存到文件
+截取屏幕截图并保存到文件
 screenshot_path = '國泰世華銀行官網.png'
 driver.save_screenshot(screenshot_path)
 
@@ -87,22 +87,22 @@ print('下載「國泰世華銀行官網.png」完成')
 
 2. 點選左上角選單，進入 個人金融 > 產品介紹 > 信用卡列表，需計算有幾個項目並將畫面截圖。
 
-# 建立行為鍊
+建立行為鍊
 ac = ActionChains(driver)
 
-# 移到指定座標 (從 0,0 開始)
+移到指定座標 (從 0,0 開始)
 ac.move_by_offset(516,33)
 
-# 點擊一下
+點擊一下
 ac.click()
 
-# 執行
+執行
 ac.perform()
 
-# 睡一下
+睡一下
 sleep(5)
 
-# 截取屏幕截图并保存到文件
+截取屏幕截图并保存到文件
 screenshot_path = '信用卡選單.png'
 driver.save_screenshot(screenshot_path)
 
