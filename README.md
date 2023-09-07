@@ -3,8 +3,7 @@ interview quizzes
 
 國泰補習班中，有五位學生期中考的成績分別為[53, 64, 75, 19, 92]，但是老師在輸入成績的時候看反了，把五位學生的成績改成了[35, 46, 57, 91, 29]，請用一個函數來將學生的成績修正。
 
-
-"def ReverseNumber(數字列表):
+def ReverseNumber(數字列表):
     a = []
     for i in 數字列表:
         iReverse = int(str(i)[::-1])
@@ -13,7 +12,7 @@ interview quizzes
 
 成績 = [35, 46, 57, 91, 29]
 
-ReverseNumber(成績)"
+ReverseNumber(成績)
 
 國泰銀行要慶祝六十周年，需要買字母貼紙來布置活動空間，文字為"Hello welcome to Cathay 60th year anniversary"，請寫一個程式計算每個字母(大小寫視為同個字母)出現次數
 
