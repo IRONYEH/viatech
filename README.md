@@ -4,7 +4,8 @@ interview quizzes
 程式邏輯題目
 Q1 : 國泰補習班中，有五位學生期中考的成績分別為[53, 64, 75, 19, 92]，但是老師在輸入成績的時候看反了，把五位學生的成績改成了[35, 46, 57, 91, 29]，請用一個函數來將學生的成績修正。
 
-A1 : "def ReverseNumber(數字列表):
+A1 : 
+"def ReverseNumber(數字列表):
     a = []
     for i in 數字列表:
         iReverse = int(str(i)[::-1])
@@ -25,7 +26,8 @@ Q2 : 國泰銀行要慶祝六十周年，需要買字母貼紙來布置活動空
 
 "文字 = ""Hello welcome to Cathay 60th year anniversary""
 
-A2 : "文字 = ""Hello welcome to Cathay 60th year anniversary""
+A2 : 
+"文字 = ""Hello welcome to Cathay 60th year anniversary""
 
 # 將文字轉換為大寫，以便不區分大小寫
 文字 = 文字.upper()
@@ -57,7 +59,8 @@ Q3: "QA部門今天舉辦團康活動，有n個人圍成一圈，順序排號。
 請利用一段程式計算出，最後留下的那位同事，是所有同事裡面的第幾順位?"
 
 
-A3 : "def 最後留下的順位(n):
+A3 : 
+"def 最後留下的順位(n):
     # 當只有一個人時，他就是最後留下的人，順位為1
     if n == 1:
         return 1
