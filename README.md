@@ -15,12 +15,7 @@ A1 :
 成績 = [35, 46, 57, 91, 29]
 
 ReverseNumber(成績)"
-![image](https://github.com/IRONYEH/viatech/assets/144384730/7ac815ae-7380-442a-971a-86796b79a112)
 
-
-成績 = [35, 46, 57, 91, 29]
-
-ReverseNumber(成績)
 
 Q2 : 國泰銀行要慶祝六十周年，需要買字母貼紙來布置活動空間，文字為"Hello welcome to Cathay 60th year anniversary"，請寫一個程式計算每個字母(大小寫視為同個字母)出現次數
 
