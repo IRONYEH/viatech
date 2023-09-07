@@ -1,9 +1,10 @@
 # viatech
 interview quizzes
 
-國泰補習班中，有五位學生期中考的成績分別為[53, 64, 75, 19, 92]，但是老師在輸入成績的時候看反了，把五位學生的成績改成了[35, 46, 57, 91, 29]，請用一個函數來將學生的成績修正。
+程式邏輯題目
+Q1 : 國泰補習班中，有五位學生期中考的成績分別為[53, 64, 75, 19, 92]，但是老師在輸入成績的時候看反了，把五位學生的成績改成了[35, 46, 57, 91, 29]，請用一個函數來將學生的成績修正。
 
-def ReverseNumber(數字列表):
+A1 : def ReverseNumber(數字列表):
     a = []
     for i in 數字列表:
         iReverse = int(str(i)[::-1])
@@ -14,11 +15,11 @@ def ReverseNumber(數字列表):
 
 ReverseNumber(成績)
 
-國泰銀行要慶祝六十周年，需要買字母貼紙來布置活動空間，文字為"Hello welcome to Cathay 60th year anniversary"，請寫一個程式計算每個字母(大小寫視為同個字母)出現次數
+Q2 : 國泰銀行要慶祝六十周年，需要買字母貼紙來布置活動空間，文字為"Hello welcome to Cathay 60th year anniversary"，請寫一個程式計算每個字母(大小寫視為同個字母)出現次數
 
 "文字 = ""Hello welcome to Cathay 60th year anniversary""
 
-將文字轉換為大寫，以便不區分大小寫
+A2 : 將文字轉換為大寫，以便不區分大小寫
 文字 = 文字.upper()
 
 創建一個字典來存儲每個字母的出現次數
@@ -42,11 +43,11 @@ for 字母 in 文字:
 for 字母, 次數 in 排序後的字母計數:
     print(f""{字母.upper()} {次數} "")"
 
-"QA部門今天舉辦團康活動，有n個人圍成一圈，順序排號。從第一個人開始報數（從1到3報數），凡報到3的人退出圈子。
+Q3: "QA部門今天舉辦團康活動，有n個人圍成一圈，順序排號。從第一個人開始報數（從1到3報數），凡報到3的人退出圈子。
 請利用一段程式計算出，最後留下的那位同事，是所有同事裡面的第幾順位?"
 
 
-"def 最後留下的順位(n):
+A3 : "def 最後留下的順位(n):
     # 當只有一個人時，他就是最後留下的人，順位為1
     if n == 1:
         return 1
@@ -59,8 +60,11 @@ n = 100  # 假設有100個人
 最後順位 = 最後留下的順位(n)
 print(f""最後留下的同事是所有同事中的第 {最後順位} 順位。"")"
 
-1. 使用Chrome App到國泰世華銀行官網(https://www.cathaybk.com.tw/cathaybk/)並將畫面截圖。
+自動化測試
 
+Q1. 使用Chrome App到國泰世華銀行官網(https://www.cathaybk.com.tw/cathaybk/)並將畫面截圖。
+
+A1 :
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
@@ -84,8 +88,9 @@ driver.save_screenshot(screenshot_path)
 
 print('下載「國泰世華銀行官網.png」完成')
 
-2. 點選左上角選單，進入 個人金融 > 產品介紹 > 信用卡列表，需計算有幾個項目並將畫面截圖。
+Q2. 點選左上角選單，進入 個人金融 > 產品介紹 > 信用卡列表，需計算有幾個項目並將畫面截圖。
 
+A2 :
 建立行為鍊
 ac = ActionChains(driver)
 
