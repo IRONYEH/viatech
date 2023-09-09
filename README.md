@@ -76,45 +76,73 @@ Q1. 使用Chrome App到國泰世華銀行官網(https://www.cathaybk.com.tw/cath
 
 A1 :
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from time import sleep
 
+# 设置Chromedriver的路径
+chromedriver_path = "./chromedriver.exe"
 
-# 创建一个 Chrome WebDriver 的 Service 对象，并指定 Chrome WebDriver 的路径
-chrome_driver_path = "./chromedriver.exe"  # 请替换为您的 Chrome WebDriver 的路径
-service = Service(executable_path=chrome_driver_path)
+# 创建一个Chrome WebDriver实例
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_experimental_option("mobileEmulation", {"deviceName": "iPhone X"})
 
-# 使用 Service 对象创建 Chrome WebDriver 实例
-driver = webdriver.Chrome(service=service)
+# 创建一个Chromedriver Service对象，指定路径
+service = webdriver.chrome.service.Service(chromedriver_path)
+
+# 启动Chromedriver服务
+service.start()
+
+# 创建Chromedriver实例，连接到已启动的服务
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # 打开指定的网页
-url = 'https://www.cathaybk.com.tw/cathaybk'
+url = 'https://www.cathaybk.com.tw/cathaybk'  # 将URL替换为您要访问的网页
 driver.get(url)
 
-# 截取屏幕截图并保存到文件
-screenshot_path = '國泰世華銀行官網.png'
-driver.save_screenshot(screenshot_path)
+# 在此之后，您的浏览器应该在移动设备模式下
 
-print('下載「國泰世華銀行官網.png」完成')
+# 截取页面截图并保存到文件
+screenshot_path = '國泰世華銀行手機版網頁截圖.png'
+driver.save_screenshot(screenshot_path)
 
 Q2. 點選左上角選單，進入 個人金融 > 產品介紹 > 信用卡列表，需計算有幾個項目並將畫面截圖。
 
 A2 :
+# 睡一下
+sleep(2)
+
 # 建立行為鍊
 ac = ActionChains(driver)
 
 # 移到指定座標 (從 0,0 開始)
-ac.move_by_offset(516,33)
+ac.move_by_offset(27,28)
 
 # 點擊一下
 ac.click()
 
+# 等待一段时间
+sleep(2)  # 在这里休息2秒钟
+
+# 移到指定座標 (從 0,0 開始)
+ac.move_by_offset(27,212)
+
+# 點擊一下
+ac.click()
+
+# 等待一段时间
+sleep(5)  # 在这里休息2秒钟
+
+# 移到指定座標 (從 0,0 開始)
+ac.move_by_offset(27,273)
+
+# 點擊一下
+ac.click()
+
+# 等待一段时间
+sleep(5)  # 在这里休息2秒钟
+
 # 執行
 ac.perform()
-
-# 睡一下
-sleep(5)
 
 # 截取屏幕截图并保存到文件
 screenshot_path = '信用卡選單.png'
